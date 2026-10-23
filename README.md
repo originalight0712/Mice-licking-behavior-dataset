@@ -13,7 +13,7 @@ Experiment procedure
 <img width="1200" height="260" alt="image" src="https://github.com/user-attachments/assets/1309605e-0e74-4748-9d45-dc8327789f99" />
 
 The procedure of experiment has been shown as the figure above. It contains interval period, experiment period and fixation period.
-The dataset is composed by 3 brain regions including M2, VLS and SNR. Data from M2 is collected from 5 mice while VLS and SNR are collected from 8 mice.
+The dataset is composed by 3 brain regions including M2, VLS and SNR. Data from M2 is collected from 5 mice while VLS and SNR are collected from 23 mice.
 
 
 
@@ -21,15 +21,16 @@ The dataset is composed by 3 brain regions including M2, VLS and SNR. Data from 
 
 
 Datasets
----
-<img width="1765" height="517" alt="image" src="https://github.com/user-attachments/assets/822b64d7-6e86-4614-8943-2f0d9ee8dca7" />
+---<img width="1190" height="355" alt="c75791dbf632d63e07c9067884d1366d" src="https://github.com/user-attachments/assets/1e78e9ad-ef4b-4766-9696-2e8dccf2bf35" />
+
+
 
 
 The main steps of our data processing pipeline are illustrated in the figure above. First, channel selection and spike signal detection were performed to convert electrophysiological data into spike-based data.  Next, the data collected daily were segmented according to the duration of each trial, resulting in two strictly aligned sets of data: one for spikes and the other for behavior. Finally, a resampling method was applied to unify the sampling rates of both datasets and generate strictly synchronized AI-ready data instances.
 
 <img width="1130" height="476" alt="image" src="https://github.com/user-attachments/assets/19903cab-ee67-41eb-8f31-c79d2fd58583" />
 
-We collected data from 13 mice across three brain regions (M2, SNR, and VLS), with a total recording duration of 119 days spanning 203 experimental hours. Each experimental trial comprises 32-channel neural recordings collected throughout the 119-day period, accompanied by corresponding time-series neural spike data.
+We collected data from 28 mice across three brain regions (M2, SNR, and VLS), with a total recording duration of 119 days spanning 203 experimental hours. Each experimental trial comprises 32-channel neural recordings collected throughout the 119-day period, accompanied by corresponding time-series neural spike data.
 
 <img width="1000" height="670" alt="image" src="https://github.com/user-attachments/assets/f333d936-2c99-4fa4-8d5c-032fa255ac99" />
 The top left plots show consistency of neural spikes and behavior across three brain regions. The top right plots are firing rates across channels through four days. The bottom plots show the box plot of firing rate distribution across days among different mice in the M2 brain region. The consistency between spikes and behavior can be observed in all three regions of the brain, M2, VLS, and SNR. To quantify this relationship, we compute the Pearson correlation coefficient between spikes and behavior. The coefficients exceed 0.7 for all three brain regions, indicating a strong correlation between the data and ensuring its validity for encoding and decoding across regions.
